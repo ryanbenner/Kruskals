@@ -8,7 +8,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
     Driver dr(argv[1]);
-    WGraph* graph = dr.getGraph();
-    graph->printGraph(); 
+    WGraph *graph = dr.getGraph();
+    graph->computeMST();
     return 0;
 }

@@ -7,15 +7,17 @@
 
 using namespace std;
 
-class Driver {
-    public:
-        Driver(const std::string& filename);
-        ~Driver();
-        void getFile(string input);
-        void getMST();
-        WGraph* getGraph();
-    private:
-        WGraph* graph;
+class Driver
+{
+public:
+    Driver(const std::string &filename);
+    ~Driver();
+    void getFile(string input);
+    void getMST();
+    WGraph *getGraph();
+
+private:
+    WGraph *graph;
 };
 
 #endif

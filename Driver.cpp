@@ -1,8 +1,10 @@
 #include "Driver.h"
 
-Driver::Driver(const std::string& filename) {
+Driver::Driver(const std::string &filename)
+{
     std::ifstream inputFile(filename);
-    if (!inputFile.is_open()) {
+    if (!inputFile.is_open())
+    {
         std::cerr << "Error opening file: " << filename << std::endl;
         exit(EXIT_FAILURE);
     }
@@ -11,8 +13,10 @@ Driver::Driver(const std::string& filename) {
     inputFile >> sz;
     graph = new WGraph(sz);
 
-    for (int i = 0; i < sz; i++) {
-        for (int j = 0; j < sz; j++) {
+    for (int i = 0; i < sz; i++)
+    {
+        for (int j = 0; j < sz; j++)
+        {
             double weight;
             inputFile >> weight;
             graph->addEdge(i, j, weight);
@@ -21,16 +25,18 @@ Driver::Driver(const std::string& filename) {
 
     std::string end;
     inputFile >> end;
-    if (end != "END") {
+    if (end != "END")
+    {
         std::cerr << "Invalid file format. Missing 'END.' marker." << std::endl;
         exit(EXIT_FAILURE);
     }
 }
 
-Driver::~Driver () {
-
+Driver::~Driver()
+{
 }
 
-WGraph* Driver::getGraph() {
+WGraph *Driver::getGraph()
+{
     return graph;
 }
