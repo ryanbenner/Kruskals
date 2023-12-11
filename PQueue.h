@@ -1,3 +1,14 @@
+/*
+1. Identifying Info:
+    a. Ryan Benner
+    b. 2394381
+    c. rbenner@chapman.edu
+    d. CPSC 350-01
+    e. Assignment 6
+
+    PQueue implementation from class
+*/
+
 #ifndef P_QUEUE_H
 #define P_QUEUE_H
 #include "DblList.h"
@@ -14,7 +25,7 @@ class PQueue{
         int size();
         bool isEmpty();
         T peek();
-        T get(int i);
+        T get(int i); // added get() method to iterate through
         private:
         bool isMinQ;
         DblList<T>* m_list;

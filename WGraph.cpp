@@ -1,3 +1,14 @@
+/*
+1. Identifying Info:
+    a. Ryan Benner
+    b. 2394381
+    c. rbenner@chapman.edu
+    d. CPSC 350-01
+    e. Assignment 6
+
+    WGraph implementation from class, with required added methods
+*/
+
 #include "WGraph.h"
 #include <iostream>
 #include <iomanip>
@@ -122,15 +133,15 @@ void WGraph::computeMST()
     }
   }
 
-  // Iterate over edges in ascending order of weight
+  // iterate over edges in ascending order of weight (pqueue)
   while (!allEdges->isEmpty()) {
     Edge minEdge = allEdges->remove();
 
-    // Find the root of the source and destination vertices
+    // find root of source and destination vertices
     int sourceRoot = findRoot(parent, minEdge.source);
     int destRoot = findRoot(parent, minEdge.destination);
 
-    // If the roots are not the same, add the edge to the MST
+    // if roots aren't the same, you can add the edge (checking to make sure it doesn't loop)
     if (sourceRoot != destRoot) {
       // Merge the components
       parent[sourceRoot] = destRoot;
@@ -141,6 +152,7 @@ void WGraph::computeMST()
     }
   }
 
+  // print mst graph
   cout << "The MST Cost is: " << fixed << setprecision(1) << totalMSTCost << endl;
   for (int i = 0; i < m_size; ++i) {
     for (int j = 0; j < m_size; ++j) {
@@ -154,7 +166,7 @@ void WGraph::computeMST()
   }
 }
 
-// Helper function to find the root of a component in the union-find structure
+// Helper function to find the root of a component
 int WGraph::findRoot(int parent[], int i) {
   while (parent[i] != i) {
     i = parent[i];

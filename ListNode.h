@@ -1,3 +1,14 @@
+/*
+1. Identifying Info:
+    a. Ryan Benner
+    b. 2394381
+    c. rbenner@chapman.edu
+    d. CPSC 350-01
+    e. Assignment 6
+
+    ListNode implementation from class
+*/
+
 #ifndef LISTNODE_H
 #define LISTNODE_H
 #include <cstdlib>

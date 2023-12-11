@@ -1,3 +1,14 @@
+/*
+1. Identifying Info:
+    a. Ryan Benner
+    b. 2394381
+    c. rbenner@chapman.edu
+    d. CPSC 350-01
+    e. Assignment 6
+
+    Driver class implementation, processes input file and creates Graph
+*/
+
 #include "Driver.h"
 
 Driver::Driver(const std::string &filename)

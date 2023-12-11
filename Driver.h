@@ -1,6 +1,16 @@
+/*
+1. Identifying Info:
+    a. Ryan Benner
+    b. 2394381
+    c. rbenner@chapman.edu
+    d. CPSC 350-01
+    e. Assignment 6
+
+    Driver class header file
+*/
+
 #ifndef DRIVER_H
 #define DRIVER_H
-#include <sstream>
 #include <fstream>
 #include <iostream>
 #include "WGraph.h"
