@@ -65,7 +65,6 @@ public:
 	void printGraph(); // prints input graph
 	void computeMST(); // computes and prints MST
 	void printAllEdges(); // prints ALL edges from input file, in asc order
-	int findRoot(int parent[], int i); // helper method
 
 private:
 	double **m_adj;		 // is there an edge between two vertices and what's the weight of the edge
